@@ -1,0 +1,73 @@
+<!-- <h2>Apartment Details</h2>
+
+<div>
+	<form [formGroup]="editForm" novalidate>
+		<div class="form-group">
+			<label>Id:
+				<input formControlName="id">
+			</label>
+			<label>Nume: 
+				<input fromControlName="name">
+				<p>Form value: {{ editForm.value | json }}</p>
+				<p>Form status: {{ editForm.status | json }}</p>
+			</label>
+			<label>Numar de Camere:
+				<input formControlName="numarCamere">
+			</label>
+			<label>Numar de Bai:
+				<input formControlName="numarBai">
+			</label>
+			<label>Adresa:
+				<input formControlName="adresa">
+			</label>
+			<label>Suprafata:
+				<input formControlName="suprafata">
+				<!select measurement, bind that info too
+			</label>
+			<label>Pret:
+				<input formControlName="pret">
+			</label>
+			<p>Name value: {{ editForm.get('name').value }}</p>
+		</div>
+	</form>
+</div> --> 
+<md-card>
+	<md-toolbar color="primary">Edit details</md-toolbar>
+	<md-card-content>
+		<form [formGroup]="editForm" (ngSubmit)="onSubmit()" novalidate>
+          <div class="form-group">
+<!-- 			<md-input-container>
+				<input mdInput formControlName="id" placeholder="ID">
+			</md-input-container>	 -->	
+			<md-input-container>
+				<input mdInput formControlName="name" placeholder="Name">
+			</md-input-container>
+			<div class="new-line"></div>
+			<md-input-container>
+				<input mdInput formControlName="numarCamere" placeholder="Numar Camere">
+			</md-input-container>
+			<md-input-container>
+				<input mdInput formControlName="numarBai" placeholder="Numar Bai">
+			</md-input-container>
+			<md-input-container>
+				<textarea mdInput formControlName="adresa" placeholder="Adresa"></textarea>
+			</md-input-container>
+			<div class="new-line"></div>
+			<md-input-container>
+				<input mdInput formControlName="suprafata" placeholder="Suprafata">
+				<span md-suffix>m3</span>
+			</md-input-container>
+			<div class="new-line"></div>
+			<md-input-container>
+				<input mdInput formControlName="pret" placeholder="Pret">
+				<span md-prefix>$&nbsp;</span>
+			</md-input-container>
+<!-- 			<p>Form value: {{ editForm.value | json }}</p>
+			<p>Form status: {{ editForm.status | json }}</p> -->
+			<div class="new-line"></div>
+          </div>
+          <button md-raised-button type="submit" color="accent">Save</button>
+          <button md-raised-button type="reset" (click)="revert()" color="warn">Revert</button>
+		</form>
+	</md-card-content>
+</md-card>

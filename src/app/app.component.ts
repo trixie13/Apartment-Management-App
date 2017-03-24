@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
-
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'app works!';
+  title = 'Apartment Management App';
+
+  tabLinks = [
+	  {label: 'Dashboard', link:'/dashboard'},
+	  {label: 'Apts list', link:'/apts'}
+  ];
+  activeLinkIndex = 0;
 }

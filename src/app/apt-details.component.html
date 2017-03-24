@@ -1,0 +1,68 @@
+<!-- <div *ngIf="apt">
+	<h2>{{apt.name}} details!</h2>
+	<div><label>id: </label>{{apt.id}}</div>
+	<div><label>numar camere: </label>{{apt.numarCamere}}</div>
+	<div><label>numar bai: </label>{{apt.numarBai}}</div>
+	<div><label>adresa: </label>{{apt.adresa}}</div>
+	<div><label>suprafata: </label>{{apt.suprafata}}</div>
+	<div><label>pret: </label>{{apt.pret}}</div>
+	<div><label>adresa: </label>{{apt.adresa}}</div>
+</div> -->
+<button md-raised-button (click)="goBack()" class="float-right">Back</button>
+<div class="boxthingie">
+	<div *ngIf="apt">
+	    <md-card class="md-primary">
+			<md-card-title>{{apt.name}} details</md-card-title>
+			<md-card-content>
+			    <md-list>
+					<md-list-item class="md-2-line">
+					    <div class="md-list-item-text" layout="column">
+							<h4 class="md-body-2">Id</h4>
+							<p>{{apt.id}}</p>
+						</div>
+					</md-list-item>
+					<md-list-item class="md-2-line">
+						<div class="md-list-item-text" layout="column">
+							<h4>Nume </h4> 
+							<p>{{apt.name}}</p>
+						</div>
+					</md-list-item>
+					<md-list-item class="md-2-line">
+						<div class="md-list-item-text" layout="column">
+							<h4>Numar Camere </h4> 
+							<p>{{apt.numarCamere}}</p>
+						</div>
+					</md-list-item>
+					<md-list-item class="md-2-line">
+						<div class="md-list-item-text" layout="column">
+							<h4>Numar Bai </h4> 
+							<p>{{apt.numarBai}}</p>
+						</div>
+					</md-list-item>
+					<md-list-item class="md-2-line">
+						<div class="md-list-item-text" layout="column">
+							<h4>Adresa</h4> 
+							<p>{{apt.adresa}}</p>
+						</div>
+					</md-list-item>
+					<md-list-item class="md-2-line">
+						<div class="md-list-item-text" layout="column">
+							<h4>Suprafata </h4> 
+							<p>{{apt.suprafata}}</p>
+						</div>
+					</md-list-item>
+					<md-list-item class="md-2-line">
+						<div class="md-list-item-text" layout="column">
+							<h4>Pret </h4> 
+							<p>{{apt.pret}}</p>
+						</div>
+					</md-list-item>
+				</md-list>
+            </md-card-content>
+			<md-card-actions>
+				<a routerLink="./edit-form"><button md-raised-button>Edit</button></a>
+			</md-card-actions>
+		</md-card>
+	</div> <!-- end ngif div -->
+	<router-outlet></router-outlet>
+</div> 

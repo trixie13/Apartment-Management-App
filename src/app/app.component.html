@@ -1,3 +1,48 @@
-<h1>
+<h1 class="md-display-2">
   {{title}}
 </h1>
+<!-- <h2>Apartamentele mele</h2>
+<nav md-tab-nav-bar routerLinkActive #rla="routerLinkActive" [active]="rla.isActive">
+  <a md-tab-link 
+     routerLink="/dashboard">Dashboard</a>
+  <a md-tab-link 
+     routerLink="/apts">Apts list</a>
+</nav>
+<router-outlet></router-outlet> -->
+
+<nav md-tab-nav-bar>
+  <a md-tab-link
+     *ngFor="let tab of tabLinks; let i = index"
+     [routerLink]="tab.link"
+     [active]="activeLinkIndex === i"
+     (click)="activeLinkIndex = i">
+    {{tab.label}}
+  </a>
+</nav>
+<router-outlet></router-outlet>
+
+
+<!-- <md-list class="apartamente">
+  <md-list-item *ngFor="let apt of apts" (click)="onSelect(apt)">
+    {{apt.name}}
+  </md-list-item>
+</md-list>
+<apt-details [apt]="focusApt"></apt-details> -->
+
+<!-- <div>
+    <label>name: </label>
+    <input [(ngModel)]="selectedHero.name" placeholder="name"/>
+</div> -->
+
+<!-- moved to apts.component.html -->
+<!-- <md-list class="apartamente">
+  <md-list-item *ngFor="let apt of apts" (click)="onSelect(apt)">
+    <span>{{apt.id}}</span>
+    <h3>{{apt.name}}</h3>
+    <span>{{apt.numarBai}}</span>
+    <span>{{apt.adresa}}</span>
+    <span>{{apt.suprafata}}</span>
+    <span>{{apt.pret}}</span>
+  </md-list-item>
+</md-list>
+<apt-details [apt]="focusApt"></apt-details> -->

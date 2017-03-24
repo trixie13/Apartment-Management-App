@@ -1,0 +1,42 @@
+<!-- <md-list class="apartamente">
+
+  <md-list-item *ngFor="let apt of apts">
+    <span>{{apt.id}}</span>
+    <h3>{{apt.name}}</h3>
+    <span>{{apt.numarBai}}</span>
+    <span>{{apt.adresa}}</span>
+    <span>{{apt.suprafata}}</span>
+    <span>{{apt.pret}}</span>
+    <a [routerLink]="['/apt-details',apt.id]">
+      <button md-button>View detais</button></a>
+    <hr>
+  </md-list-item>
+</md-list> -->
+<!-- <apt-details [apt]="focusApt"></apt-details> -->
+
+<table class="bordered">
+  <thead>
+    <tr>
+      <th>Nume</th>
+      <th>Numar Camere</th>
+      <th>Numar Bai</th>
+      <th>Adresa</th>
+      <th>Suprafata</th>
+      <th>Pret</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let apt of apts">
+      <td>{{apt.name}}</td>
+      <td>{{apt.numarCamere}}</td>
+      <td>{{apt.numarBai}}</td>
+      <td>{{apt.adresa}}</td>
+      <td>{{apt.suprafata}}</td>
+      <td>{{apt.pret}}</td>
+      <td>
+      <a [routerLink]="['/apt-details',apt.id]">
+      <button md-button>View detais</button></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
